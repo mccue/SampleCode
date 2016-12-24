@@ -11,18 +11,18 @@ To install the dependencies run the following command :
 We use phpunit to run our sample calls
 
 Update the `configuration.ini` file under the `root` folder. For more information on `configuration.ini` refer :
-	 
+
 * [Manual](https://github.com/visa/SampleCode/wiki/Manual)
 
 Then you can run the API calls using the command below:
-    
+
     $ ./vendor/bin/phpunit
 
 To run an individual test file :
 
 	$ ./vendor/bin/phpunit tests/atmlocator/LocateAtmApiTest.php
 
-You would need to generate a Call Id for calling Visa Checkout. The documentation for generating Call Id can be found at :
+	You would need to generate a Call Id for calling Visa Checkout. See the Visa Checkout sample for [JavaScript](vdp-javascript) to get started. The documentation for generating Call Id can be found at :	
 
 * [Visa Checkout Guide](https://github.com/visa/SampleCode/wiki/Visa-Checkout)
 
