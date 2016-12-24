@@ -1,35 +1,30 @@
-# Visa Developer Platform - Sample Code Snippets
+# PHP Sample Code for Visa API calls
 
-This repository hosts the sample code snippets for the [Visa Developer Platform](https://developer.visa.com/)
+## Installation
 
-If you are new to the Visa Developer Platform, please take a look at our [Getting Started Guide](https://developer.visa.com/vdpguide#get-started-overview) which walks you through the steps to make a basic helloworld API call.
+To install the dependencies run the following command :
 
-Once you are comfortable with the same and have also explored the documentation to know about the various API that Visa exposes, you can then use the sample code on this site as a starting point in your journey towards building your application.
+	$ composer install
 
-Currently, the code snippets are provided in 6 languages. Each of them is present in the respective folder as follows : 
+## Usage
 
-* [C#](vdp-c-sharp)
-* [Java](vdp-java)
-* [Ruby](vdp-ruby)
-* [Nodejs](vdp-node)
-* [Python](vdp-python)
-* [Php](vdp-php)
+We use phpunit to run our sample calls
 
-Sample code is available for the following :
+Update the `configuration.ini` file under the `root` folder. For more information on `configuration.ini` refer :
 
-* CyberSource Payments 
-* Visa Direct
-* Visa Checkout 
-* Mobile Location Confirmation
-* Visa Transaction Alerts
-* Visa Consumer Transaction Control
-* Payment Account Validation
-* Visa Travel Notification Service
-* Merchant Search
-* Merchant Locator
-* Visa Global ATM Locator
-* Payment Account Attributes Inquiry
-* Foreign Exchange Rates
+* [Manual](https://github.com/visa/SampleCode/wiki/Manual)
 
-The sample code walks you through the basics for making a successful api call and passing through the authentication steps. Feel free to use and review our code. Happy Coding!!!
+Then you can run the API calls using the command below:
 
+    $ ./vendor/bin/phpunit
+
+To run an individual test file :
+
+	$ ./vendor/bin/phpunit tests/atmlocator/LocateAtmApiTest.php
+
+	You would need to generate a Call Id for calling Visa Checkout. See the Visa Checkout sample for
+*	[JavaScript](../../tree/master/vdp-javascript) to get started. The documentation for generating Call Id can be found at :	
+
+* [Visa Checkout Guide](https://github.com/visa/SampleCode/wiki/Visa-Checkout)
+
+The sample code provided reads the credentials from configuration file as plain text. As a best practice we recommend you to store the credentials in an encrypted form and decrypt while using them.
