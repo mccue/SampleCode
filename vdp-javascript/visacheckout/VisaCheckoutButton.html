@@ -1,0 +1,43 @@
+<html>
+<!-- Usage:
+This file contains the minimal JavaScript to get started with Visa Checkout.
+Set the apikey in V.init to your API key (note the lowercase apikey parameter).
+Move this file to your web server and run; the JavaScript library must be
+executed from a web server. You will need the callId from the response to make
+API calls.
+-->
+<head>
+  <script type="text/javascript">
+    function onVisaCheckoutReady() {
+      V.init( {
+        apikey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        settings: {
+          dataLevel: "SUMMARY"
+        },
+        paymentRequest: {
+          currencyCode: "USD",
+          subtotal: "10.00"
+        }
+      });
+      V.on("payment.success", function(payment) {
+        document.write("payment.success: \n" + JSON.stringify(payment));
+      });
+      V.on("payment.cancel", function(payment) {
+        document.write("payment.cancel: \n" + JSON.stringify(payment));
+      });
+      V.on("payment.error", function(payment, error) {
+        document.write("payment.error: \n" +
+          JSON.stringify(payment) + "\n" +
+          JSON.stringify(error));
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png" />
+  <script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js">
+  </script>
+</body>
+
+</html>
