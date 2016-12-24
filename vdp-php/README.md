@@ -22,7 +22,8 @@ To run an individual test file :
 
 	$ ./vendor/bin/phpunit tests/atmlocator/LocateAtmApiTest.php
 
-	You would need to generate a Call Id for calling Visa Checkout. See the Visa Checkout sample for [JavaScript](vdp-javascript) to get started. The documentation for generating Call Id can be found at :	
+You would need to generate a Call Id for calling Visa Checkout. See the Visa Checkout sample for
+*	[JavaScript](../../tree/master/vdp-javascript) to get started. The documentation for generating Call Id can be found at :
 
 * [Visa Checkout Guide](https://github.com/visa/SampleCode/wiki/Visa-Checkout)
 
